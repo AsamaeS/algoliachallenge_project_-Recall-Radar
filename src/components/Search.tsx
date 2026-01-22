@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { InstantSearchNext } from 'react-instantsearch-nextjs';
-import { Hits, useInstantSearch, Configure } from 'react-instantsearch';
+import { Hits, useInstantSearch, Configure, useSearchBox } from 'react-instantsearch';
 import { searchClient } from '@/lib/algolia';
 import { ShieldCheck, ShieldAlert, ShieldQuestion, Search as SearchIcon, AlertTriangle, X } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
@@ -67,13 +67,13 @@ const ResultsCounter = ({ onStateChange }: { onStateChange: (state: 'RED' | 'ORA
 };
 
 const CustomSearchBox = () => {
-    const { indexUiState, refine } = useInstantSearch();
-    const [inputValue, setInputValue] = useState(indexUiState.query || '');
+    const { query, refine } = useSearchBox();
+    const [inputValue, setInputValue] = useState(query || '');
 
-    // Sync input value with external query changes (e.g. initial state)
+    // Sync input value with external query changes
     useEffect(() => {
-        setInputValue(indexUiState.query || '');
-    }, [indexUiState.query]);
+        setInputValue(query || '');
+    }, [query]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = e.target.value;
