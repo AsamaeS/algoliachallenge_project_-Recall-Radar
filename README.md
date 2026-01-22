@@ -58,10 +58,22 @@ Review
 ToyWorld Teddy Search Result
 
 NOTE
+
+
 <img width="886" height="402" alt="image" src="https://github.com/user-attachments/assets/34b58cfe-0bc1-4dbc-9082-8b3b60991e0a" />
 
+
+
+
+
 Note: While the screenshot shows an orange badge, the logic has since been updated to trigger Red for exact matches as verified in subsequent tests.
+
+
+
 <img width="879" height="407" alt="image" src="https://github.com/user-attachments/assets/21322f75-b814-4615-8f96-703567a4ae46" />
+
+
+
 
 Case B: No Match (Green Status)
 When no recall is found, a reassuring green badge appears with an official disclaimer.
