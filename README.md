@@ -48,6 +48,33 @@ Recall Radar is a professional, non-conversational product safety checker focuse
 
 ## 🎯 Demo Scenarios
 
+
+Demonstration
+Case A: Match Found (Red Status)
+When an exact match for a recalled product is found, a high-alert red badge is displayed.
+
+ToyWorld Teddy Search Result
+Review
+ToyWorld Teddy Search Result
+
+NOTE
+<img width="886" height="402" alt="image" src="https://github.com/user-attachments/assets/34b58cfe-0bc1-4dbc-9082-8b3b60991e0a" />
+
+Note: While the screenshot shows an orange badge, the logic has since been updated to trigger Red for exact matches as verified in subsequent tests.
+<img width="879" height="407" alt="image" src="https://github.com/user-attachments/assets/21322f75-b814-4615-8f96-703567a4ae46" />
+
+Case B: No Match (Green Status)
+When no recall is found, a reassuring green badge appears with an official disclaimer.
+
+RandomBrandXYZ Search Result
+Review
+RandomBrandXYZ Search Result
+
+Case C: Partial / Fuzzy Match (Orange Status)
+When a search query is similar but not an exact match (e.g., a typo), the system alerts the user to verify details.
+
+Preview unavailable
+
 | Query | Status | Description |
 | :--- | :--- | :--- |
 | **ToyWorld Teddy** | 🔴 RED | Confirmed recall for serious risk |
